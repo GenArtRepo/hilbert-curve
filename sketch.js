@@ -77,7 +77,9 @@ function draw(){
     strokeWeight(1);
 
     for (let i = 1; i < path.length; i++) {
-        let h = map(i, 0, path.length, 0, 360);
+        // Set h param by interpolating in a 360 circle
+        let h = map(i, 0, path.length, 0, 360); 
+        // Set the color
         stroke(h, 255, 255);
         line(path[i].x, path[i].y, path[i - 1].x, path[i - 1].y);
     }
